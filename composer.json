@@ -1,0 +1,29 @@
+{
+    "name": "tsaiyihua/laravel-ecpay",
+    "description": "ecpay library for laravel",
+    "type": "library",
+    "keywords": ["payment", "ecpay", "laravel"],
+    "require": {
+        "php": ">=8.0",
+        "laravel/framework": "^9.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yihua Tsai",
+            "email": "tsaiyihua@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TsaiYiHua\\FunPoint\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TsaiYiHua\\FunPoint\\FunPointServiceProvider"
+            ]
+        }
+    }
+}
