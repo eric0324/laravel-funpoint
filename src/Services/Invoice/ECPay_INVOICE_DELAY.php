@@ -50,7 +50,7 @@ class FunPoint_INVOICE_DELAY implements FunPointService
         'DelayDay' => '',
         'Tsr' => '',
         'PayType' => 2,
-        'PayAct' => 'ECPAY',
+        'PayAct' => 'FUNPOINT',
         'NotifyURL' =>''
     );
 
@@ -525,8 +525,8 @@ class FunPoint_INVOICE_DELAY implements FunPointService
             array_push($arErrors, "34:Invalid PayType.");
 
         } else {
-            // *必填項目 交易類別名稱預設不能為空值 僅允許 ECPAY
-            $arParameters['PayAct'] = 'ECPAY' ;
+            // *必填項目 交易類別名稱預設不能為空值 僅允許 FUNPOINT
+            $arParameters['PayAct'] = 'FUNPOINT' ;
         }
 
         if(sizeof($arErrors)>0) {

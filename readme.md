@@ -1,5 +1,5 @@
 # Laravel FunPoint
-Laravel FunPoint 為串接FunPoint的非官方套件
+Laravel FunPoint 為串接 FunPoint 的非官方套件
 
 ## 系統需求
 - v3.x
@@ -12,9 +12,6 @@ Laravel FunPoint 為串接FunPoint的非官方套件
   - PHP >= 7 且 < 8.0
   - Laravel < 6.0 且 >= 5.7
 
-## 安裝
-```composer require tsaiyihua/laravel-ecpay```
-
 ## 環境設定
 ```php artisan vendor:publish --tag=ecpay```
 
@@ -22,11 +19,11 @@ Laravel FunPoint 為串接FunPoint的非官方套件
   
 ### .env 裡加入
 ```
-ECPAY_MERCHANT_ID=
-ECPAY_HASH_KEY=
-ECPAY_HASH_IV=
-ECPAY_INVOICE_HASH_KEY=
-ECPAY_INVOICE_HASH_IV=
+FUNPOINT_MERCHANT_ID=
+FUNPOINT_HASH_KEY=
+FUNPOINT_HASH_IV=
+FUNPOINT_INVOICE_HASH_KEY=
+FUNPOINT_INVOICE_HASH_IV=
 ```
  - 金流測試用的參數值請參考介接文件 ecpay_gw_p110.pdf 第11頁。
  - 查詢發票用的參數請請參考介接文件 ecpay_004.pdf 第6頁。
@@ -208,7 +205,7 @@ class InvoiceController extends Controller
  ```
  
 #### 如果要用自己傳送資料的頁面
-- 方法一： 在 .env 裡使用 ECPAY_SEND_FORM 的環境變數來指定。
+- 方法一： 在 .env 裡使用 FUNPOINT_SEND_FORM 的環境變數來指定。
 - 方法二： 直接指定 FunPoint::$sendForm 的值來指定。
  
 ### 所有文件列的參數基本上都可用，參數用法請參考FunPoint串接文件
